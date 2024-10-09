@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdentiNacional</title>
+</head>
+<body>
+    <h1>Verificação de Nacionalidade</h1>
+    
+    Nacionalidade: <input type="text" name="txtvel" id="txtvel" placeholder="Digite seu país">
+    <input type="button" value="Verificar" onclick="identificar()">
+    
+    <div id="res"></div>
+
+    <script>
+        function identificar() {
+            var pais = document.getElementById('txtvel').value; // Captura o valor do input
+            var res = document.getElementById('res'); // Div para exibir o resultado
+
+            console.log(`Vivendo em ${pais}`);
+            
+            // Verifica se o país é Brasil
+            if (pais.toLowerCase() === 'brasil') {
+                res.innerHTML = 'Você é Brasileiro(a).';
+            } else {
+                res.innerHTML = 'Você é Estrangeiro(a).';
+            }
+        }
+    </script>
+</body>
+</html>
